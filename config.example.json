@@ -1,0 +1,12 @@
+{
+    "deepseek": {
+        "apiKey": "your-deepseek-api-key-here",
+        "apiUrl": "https://api.deepseek.com/v1/chat/completions",
+        "model": "deepseek-chat"
+    },
+    "openrouter": {
+        "apiKey": "your-openrouter-api-key-here",
+        "apiUrl": "https://openrouter.ai/api/v1/chat/completions",
+        "model": "qwen/qwq-32b:free"
+    }
+}

@@ -1,0 +1,30 @@
+# Binaries
+bin/
+dist/
+
+# Dependency directories
+vendor/
+go/pkg/
+
+# IDE files
+.vscode/
+.idea/
+
+# Build output
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary
+*.test
+
+# Output of go coverage tool
+*.out
+
+# Local configuration files
+config.json
+
+# Go workspace file
+go.work
