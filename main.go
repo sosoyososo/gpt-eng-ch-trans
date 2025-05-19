@@ -1,9 +1,10 @@
 package main
 
 import (
+	"embed"
+	_ "embed"
 	"encoding/json"
 	"fmt"
-	"io"
 	"os"
 )
 
@@ -12,14 +13,11 @@ type Config struct {
 	Openrouter OpenrouterConfig `json:"openrouter"`
 }
 
-func loadConfig() (*Config, error) {
-	configFile, err := os.Open("config.json")
-	if err != nil {
-		return nil, err
-	}
-	defer configFile.Close()
+//go:embed config.json
+var configFiles embed.FS
 
-	configData, err := io.ReadAll(configFile)
+func loadConfig() (*Config, error) {	
+	configData, err := configFiles.ReadFile("config.json")
 	if err != nil {
 		return nil, err
 	}
