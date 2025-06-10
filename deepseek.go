@@ -62,10 +62,7 @@ func deepseek(content string, config DeepseekConfig) {
 		if choice, ok := choices[0].(map[string]interface{}); ok {
 			if message, ok := choice["message"].(map[string]interface{}); ok {
 				if content, ok := message["content"].(string); ok {
-					fmt.Println("\n翻译结果：")
-					fmt.Println("----------------------------------------")
-					fmt.Println(content)
-					fmt.Println("----------------------------------------")
+					fmt.Println(content)					
 					return
 				}
 			}
